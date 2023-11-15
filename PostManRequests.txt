@@ -1,0 +1,52 @@
+1- to sign up : Post (/users/signUp)
+
+body:
+ {
+    "Username": "<TypeHere>",
+    "Email": "<TypeHere>",
+    "Password": "<TypeHere>",
+    "mobileNumber":"<TypeHere>"
+ }
+
+2- to sign in : Post (/users/signIn)
+
+body:
+ {
+    "Username": "<TypeHere>",
+    "Email": "<TypeHere>",
+    "Password": "<TypeHere>"
+ }
+
+3- show users in database : Get (/users/<Type Email here>)
+
+like: http://localhost:8080/users/name@gmail.com
+
+4- Show User Menu links : Get (/menu/userMenu)
+
+5- Pay Menu links : Get (/menu/PayMenu)
+
+6- pay bills: post ( /users/pay/bill )
+
+in the params tab:
+the key "choice" is the way of payment, you can enter the values (1 for wallet payment, 2 for credit card payment)
+the key "amount" is the amount of money you want to pay (users signs up for the first time he will get 1,000 L.E in his wallet)
+the key "sp" is the service provider you want to pay for, the values(1 for Gas, 2 for Electricity, 3 for water)
+the key "ccn" is the credit card number,(works with 2nd choice)
+
+7- pay bills: post ( transfer to another bank account )
+
+in the params tab:
+the key "choice" is the way of payment, you can enter the values (1 transfer to another bank account, 2 Transfer To a Mobile Wallet through a wallet providers, 3 Transfer to another Instapay account)
+the key "amount" is the amount of money you want to pay (users signs up for the first time he will get 1,000 L.E in his wallet)
+the key "sp" is the service provider you want to pay for, the values(1 for Vodafone Cash, 2 for Fawry, 3 CIB)
+the key "ccn" is the credit card number,(works with 1st choice)
+
+8- Add cash to wallet: Post ( /users/addCash )
+
+in the params tab:
+the key "cnum" is the credit card number, ( not used )
+the key "cash" is the amount you want to deposit in the wallet, and enter the desired amount
+( user should be signed in to add to his wallet )
+
+9- Show Wallet Balance: Get ( /users/showWallet )
+ 
