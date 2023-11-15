@@ -33,7 +33,7 @@ the key "amount" is the amount of money you want to pay (users signs up for the 
 the key "sp" is the service provider you want to pay for, the values(1 for Gas, 2 for Electricity, 3 for water)
 the key "ccn" is the credit card number,(works with 2nd choice)
 
-7- pay bills: post ( transfer to another bank account )
+7- pay bills: post ( /users/pay/transfer )
 
 in the params tab:
 the key "choice" is the way of payment, you can enter the values (1 transfer to another bank account, 2 Transfer To a Mobile Wallet through a wallet providers, 3 Transfer to another Instapay account)
